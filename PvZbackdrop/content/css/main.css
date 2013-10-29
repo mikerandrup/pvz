@@ -1,0 +1,95 @@
+﻿body, div, img, span
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body
+{
+    background-color: #000;
+}
+
+
+#stage
+{
+    margin: 0 auto;
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    background-color: #444;
+}
+
+#backdrop
+{
+    z-index: 1;
+    background-image: url('/content/images/backdrop.jpg');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    -webkit-transition-duration: 5s;
+    -webkit-transition-property: background-position;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+#backdrop.right
+{
+    background-position: 99.375% top;
+}
+
+#backdrop.center
+{
+    background-position: 27.5% top;
+}
+
+#logo
+{
+    position: absolute;
+    z-index: 10;
+    width: 20%;
+    height: auto;
+    margin: 8.375% 9.5%;
+    opacity: 0.0;
+
+    -webkit-transition-duration: 10s;
+    -webkit-transition-property: opacity width height;
+}
+
+#logo.visible
+{
+    opacity: 1.0;
+    width: 83%;
+}
+
+#logo.finished
+{
+    opacity: 0;
+    width: 83%;
+    -webkit-transition-duration: 3s;
+}
+
+#solarholder
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.sunshine
+{
+    top: -200px;
+    position: absolute;
+    -webkit-transition-property: -webkit-transform opacity;
+    -webkit-transition-duration: 10s;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation-timing-function: linear;
+    opacity: 1.0;
+    z-index: 20;
+    width: 10%;
+    display: none;
+}
